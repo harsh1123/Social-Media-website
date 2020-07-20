@@ -6,7 +6,7 @@ mongoose.connect('mongodb://localhost/codeial2');
 
 const db = mongoose.connection;
 
-db.on('error',console.bind.error(console,'error connecting to database'));
+db.on('error',console.error.bind(console,'error connecting to database'));
 
 db.once('open',function(err){
     if(err)
