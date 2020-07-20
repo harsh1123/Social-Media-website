@@ -1,4 +1,6 @@
 
+const User = require('../models/userSchema');
+
 module.exports.profile = function(req,res)
 {
     return res.render('user_profile',{
@@ -6,7 +8,7 @@ module.exports.profile = function(req,res)
     });
 }
 
-module.exports.create = function(req,res)
+module.exports.signUp= function(req,res)
 {
 
     return res.render('user_singup',{
@@ -14,10 +16,52 @@ module.exports.create = function(req,res)
     });
 }
 
-module.exports.createSession = function(req,res)
+module.exports.signIn = function(req,res)
 {
 
     return res.render('user_signin',{
         title:"user | signin"
     });
+}
+
+module.exports.create=function(req,res)
+{
+    if(req.body.password != req.body.confirm)
+    {
+        return res.redirect('back');
+    }
+
+    User.findOne({email:req.body.email},function(err,user){
+        if(err)
+        {
+            console.log(err);
+            return;
+        }
+        if(!user)
+        {
+            User.create(req.body,function(err,user){
+                if(err)
+                {
+                    console.log(err);
+                    return;
+                }
+
+                return res.redirect('/user/signin');
+
+
+            });
+        }
+        else{
+            return res.redirect('back');
+        }
+
+    });
+
+
+
+}
+
+module.exports.createSession =function(req,res)
+{
+    //to do
 }
