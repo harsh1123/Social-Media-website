@@ -5,7 +5,7 @@ const app = express();
 
 
 
-
+app.use('/',require('./routes/index'));
 
 
 
