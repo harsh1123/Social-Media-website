@@ -4,10 +4,14 @@
  <section id='feed-posts'>
 
         <h4>Posts</h4>
+            <%  if(locals.user) {%>
+
         <form action="/posts/create" id="new-form-posts" method="POST">
                 <textarea name="content"  cols="30" rows="3" placeholder="add comments"></textarea>
                 <input type="submit" value="Post">
         </form>
+
+        <%  } %>
 
         <div id="post-list">
 
