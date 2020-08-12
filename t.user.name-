@@ -1,0 +1,101 @@
+[33mcommit 3e1c419b0685bd7d709eda732a082b974f86971b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Thu Jul 30 17:48:23 2020 +0530
+
+    authenticating user who can post
+
+[33mcommit 41c6b91ec8869c30ddcb18b670aae445406b2623[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Thu Jul 30 17:37:11 2020 +0530
+
+    adding post to the home page
+
+[33mcommit f2da9c90ef5a2632150caaa57d38cc7f326018e2[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Thu Jul 30 16:31:35 2020 +0530
+
+    creating post controller
+
+[33mcommit 0a5a5a1cdf8bd03c7d00c36742bfba399e687ba5[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Thu Jul 30 16:25:13 2020 +0530
+
+    adding post field into the home page
+
+[33mcommit 08006043bd09bee34090de1e7e83083239005617[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Thu Jul 30 16:10:12 2020 +0530
+
+    creating scss folder
+
+[33mcommit 285c5e66534964d51a7fc8a546b5ea819b55914d[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Mon Jul 20 22:46:50 2020 +0530
+
+    adding sass middle ware
+
+[33mcommit 26b0e7059dfa9b22aea20fa444022b0c331e2f89[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Mon Jul 20 22:27:49 2020 +0530
+
+    completed authentication process
+
+[33mcommit df32a790fc95f8aed9185e94c621e0703b8dfccb[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Mon Jul 20 21:16:54 2020 +0530
+
+    creating a whole new authentication
+
+[33mcommit d3437c2ec110d89201f77f05ff1d8a18d21bab33[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Mon Jul 20 20:48:23 2020 +0530
+
+    adding authentication using passport
+
+[33mcommit aefabf7366756139e343cee266d9ecf379613490[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Mon Jul 20 19:55:36 2020 +0530
+
+    creating sign in page
+
+[33mcommit a8b6332e5d8beafe7154d513efc33c03634fc0f2[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Mon Jul 20 18:11:47 2020 +0530
+
+    adding signin and signup page
+
+[33mcommit 700ad98253693546b171517a6d253528cd4f1739[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Mon Jul 20 17:51:50 2020 +0530
+
+    creating user schema
+
+[33mcommit afaf1feb0f13517f95d04127335eac370aada332[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Mon Jul 20 17:40:24 2020 +0530
+
+    adding database to the project
+
+[33mcommit 422bd289ea0ddcc8b4a12ca536d8c135a18cf4cf[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Mon Jul 20 17:11:37 2020 +0530
+
+    something added
+
+[33mcommit 79c9dc73f04721a40598d9a8154c9f63f1290b60[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Mon Jul 20 16:57:20 2020 +0530
+
+    creating view for project
+
+[33mcommit 97d744dbcbe5bd764493b270470dfc3089e51e17[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Mon Jul 20 16:32:24 2020 +0530
+
+    creating home controller
+
+[33mcommit 87476338101028a5325c8c46f5a8336b2076bcf8[m
+Author: harsh shrivastava <harshshrivastava@gmail.com>
+Date:   Mon Jul 20 16:21:31 2020 +0530
+
+    first commit : Social application
