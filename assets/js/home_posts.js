@@ -16,6 +16,7 @@ let createPost = function(){
              
            let newPost = newPostDom(data.data.post);
            $('#posts-list-container>ul').prepend(newPost);
+           deletePost($(' .delete-post-button',newPost));
             
            },
            error: function(error)
@@ -44,8 +45,10 @@ let newPostDom = function(post)
                 ${post.content}
         <br>
         <small>
+
     
-        ${ post.user.name }
+        ${post.user.name}
+        
         </small>
     
         </p>
@@ -76,6 +79,27 @@ let newPostDom = function(post)
     
     </li>
     `);
+}
+
+
+let deletePost = function(deleteLink)
+{
+    $(deleteLink).click(function(e){
+        e.preventDefault();
+        $.ajax({
+           type:'get',
+           url:$(deleteLink).prop('href'),
+           success:function(data){
+             $(`#post-${data.post_id}`).remove();
+           },
+           error:function(error)
+           {
+               console.log(error.responseText);
+           }
+
+        });
+
+    });
 }
 
 createPost();
