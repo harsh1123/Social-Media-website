@@ -27,7 +27,7 @@ module.exports.destroy = async  function(req,res)
 
         let post = await Post.findById(req.params.id);
    
-    //if(post.user == req.user.id){
+    if(post.user == req.user.id){
       post.remove();
       await Comment.deleteMany({post:req.params.id});
 
@@ -35,11 +35,13 @@ module.exports.destroy = async  function(req,res)
           message:"successfully deleted message"
       });
 
-    // }else{
+    }else{
       
         
-     // return res.redirect('back');
-   // }
+     return res.json(401,{
+         message:"you cannot delete this post"
+     });
+   }
 } catch (error) {
        return res.json(500,{
            message:"internal server error"
