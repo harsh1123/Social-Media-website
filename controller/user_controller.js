@@ -1,5 +1,8 @@
 
 const User = require('../models/userSchema');
+const fs= require('fs');
+const path = require('path');
+const e = require('express');
 
 
 module.exports.profile = function(req,res)
@@ -14,21 +17,42 @@ module.exports.profile = function(req,res)
    
 }
 
-module.exports.update = function(req,res){
-    if(req.user.id == req.params.id)
-    {
-        User.findByIdAndUpdate(req.params.id,req.body,function(err,user){
+module.exports.update =async function(req,res){
+  
+    if(req.user.id == req.params.id){
+        try {
 
+            let user = await User.findById(req.params.id);
+            User.uploadedAvatar(req,res,function(err){
+                if(err)
+                {console.log('******MulterError',err);}
+
+                user.name = req.body.name;
+                user.email = req.body.email;
+               
+                if(req.file)
+                {
+                    user.avatar = User.avatarPath + '/' + req.file.filename;
+                }
+                user.save();
+                return res.redirect('back');
+
+            });
+            
+        } catch (err) {
+
+            
             return res.redirect('back');
+            
+        }
 
-        });
-
-        
     }
-    else{
-
+    else
+    {
         return res.status(401).send('Unauthorized');
-    }      
+
+    }
+
 
 }
 
