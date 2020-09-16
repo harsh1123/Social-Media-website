@@ -1,3 +1,5 @@
+const { toggleLike } = require("../../controller/like_controller");
+
 {
    
 
@@ -17,6 +19,26 @@ let createPost = function(){
            let newPost = newPostDom(data.data.post);
            $('#posts-list-container>ul').prepend(newPost);
            deletePost($(' .delete-post-button',newPost));
+
+
+           new PostComments(data.data.post._id);
+           new toggleLike($('.toggle-like-button',newPost));
+
+
+
+
+
+            new Noty({
+               theme:'relaxed',
+               text:'Post Published',
+               type:'success',
+               layout:'topRight',
+               timeout:1500
+
+            }).show();
+
+
+
             
            },
            error: function(error)
@@ -50,6 +72,15 @@ let newPostDom = function(post)
         ${post.user.name}
         
         </small>
+        <br>
+        <small>
+         
+        <a  class="toggle-like-button" data-likes="0" href=" /likes/toggle/?id=$(post._id)&type=Post">
+        0 Likes
+        </a>
+
+        </small>
+        <br>
     
         </p>
        <div class="post-comments">
